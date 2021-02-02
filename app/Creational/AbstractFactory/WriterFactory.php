@@ -1,6 +1,6 @@
 <?php
 
-namespace Creational\AbstractFactory;
+namespace App\Creational\AbstractFactory;
 
 interface WriterFactory
 {

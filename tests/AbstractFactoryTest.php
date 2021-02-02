@@ -1,16 +1,21 @@
 <?php declare(strict_types=1);
 
-namespace DesignPatterns\Creational\AbstractFactory\Tests;
+namespace Tests;
 
-use DesignPatterns\Creational\AbstractFactory\CsvWriter;
-use DesignPatterns\Creational\AbstractFactory\JsonWriter;
-use DesignPatterns\Creational\AbstractFactory\UnixWriterFactory;
-use DesignPatterns\Creational\AbstractFactory\WinWriterFactory;
-use DesignPatterns\Creational\AbstractFactory\WriterFactory;
+use App\Creational\AbstractFactory\CsvWriter;
+use App\Creational\AbstractFactory\JsonWriter;
+use App\Creational\AbstractFactory\UnixWriterFactory;
+use App\Creational\AbstractFactory\WinWriterFactory;
+use App\Creational\AbstractFactory\WriterFactory;
 use PHPUnit\Framework\TestCase;
 
 class AbstractFactoryTest extends TestCase
 {
+    /**
+     * Undocumented function
+     *
+     * @return void
+     */
     public function provideFactory()
     {
         return [
