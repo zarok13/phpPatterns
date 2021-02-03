@@ -2,11 +2,11 @@
 
 namespace Tests;
 
-use App\Creational\AbstractFactory\CsvWriter;
-use App\Creational\AbstractFactory\JsonWriter;
+use App\Creational\AbstractFactory\Interfaces\CsvWriter;
+use App\Creational\AbstractFactory\Interfaces\JsonWriter;
+use App\Creational\AbstractFactory\Interfaces\WriterFactory;
 use App\Creational\AbstractFactory\UnixWriterFactory;
 use App\Creational\AbstractFactory\WinWriterFactory;
-use App\Creational\AbstractFactory\WriterFactory;
 use PHPUnit\Framework\TestCase;
 
 class AbstractFactoryTest extends TestCase
