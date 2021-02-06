@@ -9,7 +9,7 @@ use App\Creational\AbstractFactory\UnixWriterFactory;
 use App\Creational\AbstractFactory\WinWriterFactory;
 use PHPUnit\Framework\TestCase;
 
-require "app/Creational/AbstractFactory/RealWorld/RealWorld.php";
+require "app/Creational/AbstractFactory/Real/Real.php";
 
 class AbstractFactoryTest extends TestCase
 {

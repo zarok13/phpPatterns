@@ -8,6 +8,8 @@ use App\Creational\FactoryMethod\StdoutLogger;
 use App\Creational\FactoryMethod\StdoutLoggerFactory;
 use PHPUnit\Framework\TestCase;
 
+require "app/Creational/FactoryMethod/Real/Real.php";
+
 class FactoryMethodTest extends TestCase
 {
     public function testCanCreateStdoutLogging()
