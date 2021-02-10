@@ -4,28 +4,16 @@ use PHPUnit\Framework\TestCase;
 
 final class UnitTest extends TestCase
 {
-    public function testProducerFirst(): string
-    {
-        $this->assertTrue(true);
-
-        return 'first';
-    }
-
-    public function testProducerSecond(): string
-    {
-        $this->assertTrue(true);
-
-        return 'second';
-    }
-
     /**
-     * @depends testProducerFirst
-     * @depends testProducerSecond
+     * @dataProvider additionProvider
      */
-    public function testConsumer(string $a, string $b): void
+    public function testAdd(int $a, int $b, int $expected): void
     {
-        $this->assertSame('first', $a);
-        $this->assertSame('second', $b);
+        $this->assertSame($expected, $a + $b);
     }
 
+    public function additionProvider(): CsvFileIterator
+    {
+        return new CsvFileIterator('data.csv');
+    }
 }
