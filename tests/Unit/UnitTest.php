@@ -6,30 +6,24 @@ use PHPUnit\Framework\TestCase;
 
 final class UnitTest extends TestCase
 {
-    /**
-     * @dataProvider additionWithNonNegativeNumbersProvider
-     * @dataProvider additionWithNegativeNumbersProvider
-     */
-    public function testAdd(int $a, int $b, int $expected): void
+    public function testFileWriting(): void
     {
-        $this->assertSame($expected, $a + $b);
-    }
+        $writer = new FileWriter;
 
-    public function additionWithNonNegativeNumbersProvider(): array
-    {
-        return [
-            [0, 1, 1],
-            [1, 0, 1],
-            [1, 1, 3]
-        ];
+        $this->assertFalse(@$writer->write('/is-not-writeable/file', 'stuff'));
     }
+}
 
-    public function additionWithNegativeNumbersProvider(): array
+final class FileWriter
+{
+    public function write($file, $content)
     {
-        return [
-            [-1, 1, 0],
-            [-1, -1, -2],
-            [1, -1, 0]
-        ];
+        $file = fopen($file, 'w');
+
+        if ($file === false) {
+            return false;
+        }
+
+        // ...
     }
 }
