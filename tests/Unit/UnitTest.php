@@ -6,24 +6,8 @@ use PHPUnit\Framework\TestCase;
 
 final class UnitTest extends TestCase
 {
-    public function testFileWriting(): void
+    public function testF(): void
     {
-        $writer = new FileWriter;
-
-        $this->assertFalse(@$writer->write('/is-not-writeable/file', 'stuff'));
-    }
-}
-
-final class FileWriter
-{
-    public function write($file, $content)
-    {
-        $file = fopen($file, 'w');
-
-        if ($file === false) {
-            return false;
-        }
-
-        // ...
+        $this->assertTrue(true);
     }
 }
