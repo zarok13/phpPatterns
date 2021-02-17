@@ -8,7 +8,7 @@ use App\Structural\Bridge\PingService;
 use App\Structural\Bridge\PlainTextFormatter;
 use PHPUnit\Framework\TestCase;
 
-require "app/Structural/Bridge/Real/Real.php";
+require "app/Structural/Bridge/Real/Real2.php";
 
 class BridgeTest extends TestCase
 {
