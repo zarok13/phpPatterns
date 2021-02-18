@@ -18,7 +18,7 @@ abstract class Component
      * accessing a parent of the component in a tree structure. It can also
      * provide some default implementation for these methods.
      */
-    public function setParent(Component $parent)
+    public function setParent(Component $parent = null)
     {
         $this->parent = $parent;
     }

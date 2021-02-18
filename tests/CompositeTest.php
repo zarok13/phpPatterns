@@ -7,7 +7,7 @@ use App\Structural\Composite\InputElement;
 use App\Structural\Composite\TextElement;
 use PHPUnit\Framework\TestCase;
 
-require "app/Structural/Composite/Examples/Conceptual.php";
+require "app/Structural/Composite/Examples/Real.php";
 
 class CompositeTest extends TestCase
 {
