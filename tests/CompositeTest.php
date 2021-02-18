@@ -7,21 +7,43 @@ use App\Structural\Composite\InputElement;
 use App\Structural\Composite\TextElement;
 use PHPUnit\Framework\TestCase;
 
+require "app/Structural/Composite/Examples/Conceptual.php";
+
 class CompositeTest extends TestCase
 {
     public function testRender()
     {
         $form = new Form();
-        $form->addElement(new TextElement('Email:'));
-        $form->addElement(new InputElement());
+        $email = new TextElement('Email:');
+        $input = new InputElement();
+        $form->addElement($email);
+        $form->addElement($input);
 
         $embed = new Form();
-        $embed->addElement(new TextElement('Password:'));
-        $embed->addElement(new InputElement());
+        $password = new TextElement('Password:');
+        $input2 = new InputElement();
+        $embed->addElement($password);
+        $embed->addElement($input2);
         $form->addElement($embed);
 
         $this->assertSame(
             '<form>Email:<input type="text" /><form>Password:<input type="text" /></form></form>',
+            $form->render()
+        );
+
+        $form->removeElement($input);
+
+        $this->assertSame(
+            '<form>Email:<form>Password:<input type="text" /></form></form>',
+            $form->render()
+        );
+
+        $form->addElement($input);
+
+        $form->removeElement($embed);
+        
+        $this->assertSame(
+            '<form>Email:<input type="text" /></form>',
             $form->render()
         );
     }
