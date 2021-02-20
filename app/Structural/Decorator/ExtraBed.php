@@ -8,11 +8,11 @@ class ExtraBed extends BookingDecorator
 
     public function calculatePrice(): int
     {
-        return $this->booking->calculatePrice() + self::PRICE;
+        return parent::calculatePrice() + self::PRICE;
     }
 
     public function getDescription(): string
     {
-        return $this->booking->getDescription() . ' with extra bed';
+        return parent::getDescription() . ' with extra bed';
     }
 }

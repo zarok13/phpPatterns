@@ -8,11 +8,11 @@ class WiFi extends BookingDecorator
 
     public function calculatePrice(): int
     {
-        return $this->booking->calculatePrice() + self::PRICE;
+        return parent::calculatePrice() + self::PRICE;
     }
 
     public function getDescription(): string
     {
-        return $this->booking->getDescription() . ' with wifi';
+        return parent::getDescription() . ' with wifi';
     }
 }

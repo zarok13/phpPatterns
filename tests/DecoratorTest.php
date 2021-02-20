@@ -7,6 +7,9 @@ use App\Structural\Decorator\ExtraBed;
 use App\Structural\Decorator\WiFi;
 use PHPUnit\Framework\TestCase;
 
+require "app/Structural/Decorator/Examples/Conceptual.php";
+// require "app/Structural/Decorator/Examples/Real.php";
+
 class DecoratorTest extends TestCase
 {
     public function testCanCalculatePriceForBasicDoubleRoomBooking()
