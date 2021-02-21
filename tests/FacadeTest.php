@@ -2,9 +2,9 @@
 
 namespace Tests;
 
-use App\Structural\Facade\Bios;
+use App\Structural\Facade\IBios;
 use App\Structural\Facade\Facade;
-use App\Structural\Facade\OperatingSystem;
+use App\Structural\Facade\IOperatingSystem;
 use PHPUnit\Framework\TestCase;
 
 require "app/Structural/Facade/Examples/Conceptual.php";
@@ -13,12 +13,12 @@ class FacadeTest extends TestCase
 {
     public function testComputerOn()
     {
-        $os = $this->createMock(OperatingSystem::class);
+        $os = $this->createMock(IOperatingSystem::class);
 
         $os->method('getName')
             ->will($this->returnValue('Linux'));
 
-        $bios = $this->createMock(Bios::class);
+        $bios = $this->createMock(IBios::class);
         $bios->method('launch')->with($os);
 
         $facade = new Facade($bios, $os);

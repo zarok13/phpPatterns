@@ -4,10 +4,10 @@ namespace App\Structural\Facade;
 
 class Facade
 {
-    private OperatingSystem $os;
-    private Bios $bios;
+    private IOperatingSystem $os;
+    private IBios $bios;
 
-    public function __construct(Bios $bios, OperatingSystem $os)
+    public function __construct(IBios $bios, IOperatingSystem $os)
     {
         $this->bios = $bios;
         $this->os = $os;

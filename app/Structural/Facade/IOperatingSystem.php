@@ -2,7 +2,7 @@
 
 namespace App\Structural\Facade;
 
-interface OperatingSystem
+interface IOperatingSystem
 {
     public function halt();
 

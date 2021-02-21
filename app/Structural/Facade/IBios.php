@@ -2,7 +2,7 @@
 
 namespace App\Structural\Facade;
 
-interface Bios
+interface IBios
 {
     public function execute();
 
