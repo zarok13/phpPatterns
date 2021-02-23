@@ -9,6 +9,8 @@ use PHPUnit\Framework\TestCase;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
+require "app/Behavioral/ChainOfResponsibilities/Examples/Real.php";
+
 class ChainTest extends TestCase
 {
     private Handler $chain;
