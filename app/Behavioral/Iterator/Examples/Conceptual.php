@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Behavioral\Iterator\Examples\Conceptual;
+namespace App\Behavioral\Iterator\Examples;
 
 use Iterator;
 
