@@ -6,6 +6,8 @@ use App\Behavioral\Memento\State;
 use App\Behavioral\Memento\Ticket;
 use PHPUnit\Framework\TestCase;
 
+require "app/Behavioral/Memento/Examples/Conceptual.php";
+
 class MementoTest extends TestCase
 {
     public function testOpenTicketAssignAndSetBackToOpen()
