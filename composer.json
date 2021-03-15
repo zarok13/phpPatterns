@@ -8,6 +8,7 @@
         }
     },
     "require": {
-        "psr/http-message": "^1.0"
+        "psr/http-message": "^1.0",
+        "box/spout": "^3.1"
     }
 }
